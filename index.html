@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persona 3 - S.E.E.S. Database</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --p3-dark: #070d1e;
+      --p3-darker: #020611;
+      --p3-cyan: #00d2ff;
+      --p3-blue-glow: rgba(0, 210, 255, 0.25);
+    }
+    body {
+      background-color: var(--p3-darker);
+      color: #e2e8f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .bg-p3-dark { background-color: var(--p3-dark) !important; }
+    .bg-p3-darker { background-color: var(--p3-darker) !important; }
+    .border-p3-cyan { border-color: var(--p3-cyan) !important; }
+    .text-p3-cyan { color: var(--p3-cyan) !important; }
+    .badge-p3 { background-color: var(--p3-cyan); color: #000; font-weight: bold; }
+    .p3-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--p3-cyan);
+      box-shadow: 0 0 10px var(--p3-cyan);
+    }
+    .p3-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #0b152d !important;
+      border: 1px solid rgba(0, 210, 255, 0.3) !important;
+    }
+    .p3-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px var(--p3-blue-glow) !important;
+      border-color: var(--p3-cyan) !important;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-p3-dark border-bottom border-p3-cyan sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+        <span class="badge badge-p3 px-2 py-1 rounded-1">P3R</span>
+        <span class="text-white letter-spacing">PERSONA 3</span>
+        <span class="text-p3-cyan fw-light fs-6">| S.E.E.S. ARCHIVE</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navP3" aria-controls="navP3" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navP3">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link active fw-semibold" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-light opacity-75" href="#dark-hour">Hora Oscura</a></li>
+          <li class="nav-item"><a class="nav-link text-light opacity-75" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link text-light opacity-75" href="#tartarus">Tartarus</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-sm btn-outline-info rounded-pill px-3 fw-bold" href="#galeria">Ver Agentes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <main>
+    <!-- ================= INICIO FEATURE: GALERÍA ================= -->
+<section id="galeria" class="py-5 bg-p3-darker">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <span class="badge badge-p3 px-3 py-2 text-uppercase mb-2">Archivo Confidencial</span>
+      <h2 class="display-5 fw-bold text-white">Galería del Escuadrón S.E.E.S.</h2>
+      <p class="text-secondary mx-auto" style="max-width: 600px;">
+        Registros visuales del escuadrón escolar encargado de investigar la Hora Oscura y ascender por el laberinto de Tartarus.
+      </p>
+      <div class="p3-divider mx-auto mt-3"></div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Tarjeta 1: Protagonista -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p3-card text-white h-100 rounded-3 overflow-hidden shadow">
+          <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80" class="card-img-top" alt="Makoto Yuki" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary">Arcana: El Loco</span>
+              <small class="text-p3-cyan fw-semibold">01</small>
+            </div>
+            <h5 class="card-title fw-bold text-p3-cyan">Makoto Yuki</h5>
+            <p class="card-text text-secondary small">
+              Líder de campo del escuadrón. Posee el poder del 'Comodín', lo que le permite invocar múltiples Personas en combate.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Aigis -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p3-card text-white h-100 rounded-3 overflow-hidden shadow">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80" class="card-img-top" alt="Aigis" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-info text-dark">Arcana: La Carroza</span>
+              <small class="text-p3-cyan fw-semibold">02</small>
+            </div>
+            <h5 class="card-title fw-bold text-p3-cyan">Aigis</h5>
+            <p class="card-text text-secondary small">
+              Arma de supresión anti-sombras de 7.ª generación creada por el Grupo Kirijo. Su deber principal es proteger a Makoto.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Tartarus -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p3-card text-white h-100 rounded-3 overflow-hidden shadow">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80" class="card-img-top" alt="Torre de Tartarus" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-danger">Zona Hostil</span>
+              <small class="text-p3-cyan fw-semibold">03</small>
+            </div>
+            <h5 class="card-title fw-bold text-p3-cyan">Torre de Tartarus</h5>
+            <p class="card-text text-secondary small">
+              Estructura colosal y laberíntica en la que se transforma la Preparatoria Gekkoukan durante el paso de la medianoche oculta.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4: Yukari Takeba -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p3-card text-white h-100 rounded-3 overflow-hidden shadow">
+          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80" class="card-img-top" alt="Yukari Takeba" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary">Arcana: Los Enamorados</span>
+              <small class="text-p3-cyan fw-semibold">04</small>
+            </div>
+            <h5 class="card-title fw-bold text-p3-cyan">Yukari Takeba</h5>
+            <p class="card-text text-secondary small">
+              Miembro del club de tiro con arco. Su Persona Io le otorga poderosas habilidades curativas y de elemento viento.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5: Junpei Iori -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p3-card text-white h-100 rounded-3 overflow-hidden shadow">
+          <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80" class="card-img-top" alt="Junpei Iori" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary">Arcana: El Mago</span>
+              <small class="text-p3-cyan fw-semibold">05</small>
+            </div>
+            <h5 class="card-title fw-bold text-p3-cyan">Junpei Iori</h5>
+            <p class="card-text text-secondary small">
+              El miembro más carismático y espontáneo del equipo. Lucha con espadazos pesados y magia basada en fuego con Hermes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6: El Evocador -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p3-card text-white h-100 rounded-3 overflow-hidden shadow">
+          <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80" class="card-img-top" alt="Evoker" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-warning text-dark">Herramienta</span>
+              <small class="text-p3-cyan fw-semibold">06</small>
+            </div>
+            <h5 class="card-title fw-bold text-p3-cyan">Evocador (Evoker)</h5>
+            <p class="card-text text-secondary small">
+              Artefacto con forma de pistola que simula el estrés del fin de la vida para liberar y manifestar la fuerza del Persona.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= FIN FEATURE: GALERÍA ================= -->
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
